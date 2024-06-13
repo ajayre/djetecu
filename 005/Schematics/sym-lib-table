@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "Bosch-ECU-0-280-002-005-rescue")(type "Legacy")(uri "${KIPRJMOD}/Bosch ECU 0 280 002 005-rescue.lib")(options "")(descr ""))
+)
