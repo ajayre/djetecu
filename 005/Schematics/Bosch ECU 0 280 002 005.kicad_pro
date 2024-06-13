@@ -298,23 +298,52 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "Spice",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
-      "model_mode": 0,
-      "workbook_filename": ""
+      "model_mode": 2,
+      "workbook_filename": "PG & Injectors.wbk"
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_adjust_passive_values": false,
-    "spice_external_command": "spice \"%I\"",
+    "spice_external_command": "C:\\Spice64\\bin\\ngspice \"%I\"",
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "d2cf9029-89a9-4125-8438-6915c8da0762",
+      ""
+    ],
+    [
+      "00000000-0000-0000-0000-00005f3e5fdb",
+      "Pulse Generator to Injectors"
+    ],
+    [
+      "00000000-0000-0000-0000-00005f4321f5",
+      "TPS & Fuel Pump Control"
+    ],
+    [
+      "00000000-0000-0000-0000-00005fde5d48",
+      "MPS & Temp Sensors"
+    ],
+    [
+      "00000000-0000-0000-0000-000060d3e807",
+      "Auxiliary Board 1"
+    ],
+    [
+      "00000000-0000-0000-0000-000060d478b6",
+      "Auxiliary Board 2"
+    ],
+    [
+      "00000000-0000-0000-0000-000062445c04",
+      "Simulation"
+    ]
+  ],
   "text_variables": {}
 }

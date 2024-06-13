@@ -1,0 +1,10 @@
+1
+9
+.tran 8us 200ms 0{return}{return}
+2
+1
+E18-START
+V
+1
+Net-(R15-Pad1)
+V

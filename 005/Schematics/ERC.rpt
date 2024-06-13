@@ -1,0 +1,104 @@
+ERC report (8/5/2022 1:50:01 PM, Encoding UTF8)
+
+***** Sheet /
+[multiple_net_names]: Both AUX5-AE20 and E20-TPS are attached to the same items; AUX5-AE20 will be used in the netlist
+    ; Severity: warning (excluded)
+    @(307.34 mm, 96.52 mm): Global Label 'AUX5-AE20'
+    @(149.86 mm, 172.72 mm): Global Label 'E20-TPS'
+[multiple_net_names]: Both E11-GND and E12-GND are attached to the same items; E11-GND will be used in the netlist
+    ; Severity: warning (excluded)
+    @(149.86 mm, 127.00 mm): Global Label 'E11-GND'
+    @(149.86 mm, 132.08 mm): Global Label 'E12-GND'
+[multiple_net_names]: Both AUX3-AE9 and E9-TPS are attached to the same items; AUX3-AE9 will be used in the netlist
+    ; Severity: warning (excluded)
+    @(307.34 mm, 86.36 mm): Global Label 'AUX3-AE9'
+    @(149.86 mm, 116.84 mm): Global Label 'E9-TPS'
+[multiple_net_names]: Both AUX9-BP and E7-MPS are attached to the same items; AUX9-BP will be used in the netlist
+    ; Severity: warning (excluded)
+    @(307.34 mm, 116.84 mm): Global Label 'AUX9-BP'
+    @(149.86 mm, 106.68 mm): Global Label 'E7-MPS'
+[multiple_net_names]: Both AUX2-IDL and E17-TPS are attached to the same items; AUX2-IDL will be used in the netlist
+    ; Severity: warning (excluded)
+    @(307.34 mm, 81.28 mm): Global Label 'AUX2-IDL'
+    @(149.86 mm, 157.48 mm): Global Label 'E17-TPS'
+[multiple_net_names]: Both E10-MPS and Int-6 are attached to the same items; E10-MPS will be used in the netlist
+    ; Severity: warning (excluded)
+    @(149.86 mm, 121.92 mm): Global Label 'E10-MPS'
+    @(307.34 mm, 193.04 mm): Global Label 'Int-6'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(307.34 mm, 193.04 mm): Global Label 'Int-6'
+[label_dangling]: Label not connected to anything
+    ; Severity: error (excluded)
+    @(307.34 mm, 76.20 mm): Global Label 'AUX1-10V'
+
+***** Sheet /Pulse Generator to Injectors/
+
+***** Sheet /TPS & Fuel Pump Control/
+[multiple_net_names]: Both AUX2-IDL and E17-TPS are attached to the same items; AUX2-IDL will be used in the netlist
+    ; Severity: warning (excluded)
+    @(50.80 mm, 190.50 mm): Global Label 'AUX2-IDL'
+    @(50.80 mm, 177.80 mm): Global Label 'E17-TPS'
+[lib_symbol_issues]: Symbol 'D-JetRheostat-BritishIdeas' not found in symbol library 'Bosch-ECU-0-280-002-005-rescue'.
+    ; Severity: warning (excluded)
+    @(190.50 mm, 198.12 mm): Symbol RV1 [D-JetRheostat-BritishIdeas]
+
+***** Sheet /MPS & Temp Sensors/
+[multiple_net_names]: Both E10-MPS and Int-6 are attached to the same items; E10-MPS will be used in the netlist
+    ; Severity: warning (excluded)
+    @(63.50 mm, 241.30 mm): Global Label 'E10-MPS'
+    @(63.50 mm, 252.73 mm): Global Label 'Int-6'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(63.50 mm, 252.73 mm): Global Label 'Int-6'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(63.50 mm, 114.30 mm): Global Label 'Int-5'
+[multiple_net_names]: Both AUX9-BP and E7-MPS are attached to the same items; AUX9-BP will be used in the netlist
+    ; Severity: warning (excluded)
+    @(63.50 mm, 139.70 mm): Global Label 'AUX9-BP'
+    @(63.50 mm, 203.20 mm): Global Label 'E7-MPS'
+
+***** Sheet /Auxiliary Board 1/
+[multiple_net_names]: Both AUX3-AE9 and E9-TPS are attached to the same items; AUX3-AE9 will be used in the netlist
+    ; Severity: warning (excluded)
+    @(76.20 mm, 88.90 mm): Global Label 'AUX3-AE9'
+    @(76.20 mm, 83.82 mm): Global Label 'E9-TPS'
+[multiple_net_names]: Both AUX5-AE20 and E20-TPS are attached to the same items; AUX5-AE20 will be used in the netlist
+    ; Severity: warning (excluded)
+    @(76.20 mm, 50.80 mm): Global Label 'AUX5-AE20'
+    @(76.20 mm, 55.88 mm): Global Label 'E20-TPS'
+
+***** Sheet /Auxiliary Board 2/
+
+***** Sheet /Simulation/
+[multiple_net_names]: Both 0 and E12-GND are attached to the same items; 0 will be used in the netlist
+    ; Severity: warning (excluded)
+    @(21.59 mm, 135.89 mm): Global Label '0'
+    @(30.48 mm, 139.70 mm): Global Label 'E12-GND'
+[lib_symbol_issues]: Symbol 'D-JetThermistor-BritishIdeas' not found in symbol library 'Bosch-ECU-0-280-002-005-rescue'.
+    ; Severity: warning (excluded)
+    @(86.36 mm, 35.56 mm): Symbol TH2 [D-JetThermistor-BritishIdeas]
+[lib_symbol_issues]: Symbol 'D-JetThermistor-BritishIdeas' not found in symbol library 'Bosch-ECU-0-280-002-005-rescue'.
+    ; Severity: warning (excluded)
+    @(40.64 mm, 35.56 mm): Symbol TH1 [D-JetThermistor-BritishIdeas]
+[lib_symbol_issues]: Symbol 'TPS-BritishIdeas' not found in symbol library 'Bosch-ECU-0-280-002-005-rescue'.
+    ; Severity: warning (excluded)
+    @(181.61 mm, 40.64 mm): Symbol SW1 [TPS-BritishIdeas]
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(227.33 mm, 30.48 mm): Global Label 'E17-TPS'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(227.33 mm, 35.56 mm): Global Label 'E9-TPS'
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(227.33 mm, 38.10 mm): Global Label 'E20-TPS'
+[lib_symbol_issues]: Symbol 'MPS_V2-BritishIdeas' not found in symbol library 'Bosch-ECU-0-280-002-005-rescue'.
+    ; Severity: warning (excluded)
+    @(138.43 mm, 67.31 mm): Symbol MPS1 [MPS_V2-BritishIdeas]
+[global_label_dangling]: Global label not connected anywhere else in the schematic
+    ; Severity: warning (excluded)
+    @(149.86 mm, 53.34 mm): Global Label 'E7-MPS'
+
+ ** ERC messages: 25  Errors 1  Warnings 24

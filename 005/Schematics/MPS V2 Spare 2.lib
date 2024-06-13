@@ -1,0 +1,42 @@
+* D-Jetronic Manifold Pressure Sensor Model for #2 Spare MPS
+* Version 1.1, March 2022
+* andy@britishideas.com
+
+.subckt mps pri1 pri2 sec1 sec2 vacpin gndpin
+
+* Primary coil inductance look up table by vacuum, in Henry
+.func LpriTable(vac) { vac == 0 ? 493m : vac <= 1 ? 473m : vac <= 2 ? 453m : vac <= 3 ? 436m
++ : vac <= 4 ? 421m : vac <= 5 ? 406m : vac <= 6 ? 392m : vac <= 7 ? 378m : vac <= 8 ? 366m
++ : vac <= 9 ? 352m : vac <= 10 ? 338m : vac <= 11 ? 326m : vac <= 12 ? 313m
++ : vac <= 13 ? 301m : vac <= 14 ? 290m : vac <= 15 ? 279m : 279m }
+
+* Secondary coil inductance look up table by vacuum, in Henry
+.func LsecTable(vac) { vac == 0 ? 986m : vac <= 1 ? 950m : vac <= 2 ? 920m : vac <= 3 ? 892m
++ : vac <= 4 ? 866m : vac <= 5 ? 840m : vac <= 6 ? 816m : vac <= 7 ? 791m : vac <= 8 ? 768m
++ : vac <= 9 ? 746m : vac <= 10 ? 724m : vac <= 11 ? 702m : vac <= 12 ? 681m
++ : vac <= 13 ? 661m : vac <= 14 ? 639m : vac <= 15 ? 620m : 620m }
+
+* Coupling factor look up table by vacuum
+.func kTable(vac) { vac == 0 ? 0.820626585 : vac <= 1 ? 0.808255501 : vac <= 2 ? 0.795961107 : vac <= 3 ? 0.784014604
++ : vac <= 4 ? 0.770599914 : vac <= 5 ? 0.757556351 : vac <= 6 ? 0.742307489 : vac <= 7 ? 0.727392967 : vac <= 8 ? 0.712879177
++ : vac <= 9 ? 0.692902328 : vac <= 10 ? 0.672802142 : vac <= 11 ? 0.650624994 : vac <= 12 ? 0.624320717
++ : vac <= 13 ? 0.599002493 : vac <= 14 ? 0.569331126 : vac <= 15 ? 0.538815906 : 0.538815906 }
+
+* Resistances of primary and secondary coils, in Ohms
+.param Rpri=92.5
+.param Rsec=348
+* Output parallel resistance, determined by measurement
+.param Rout=11384
+
+Ra pri1 B {Rpri}
+La B C {LpriTable(V(vacpin,gnd))*(1 - kTable(V(vacpin,gnd)))}
+Lb C pri2 {kTable(V(vacpin,gnd))*LpriTable(V(vacpin,gnd))}
+Lc C D {LpriTable(V(vacpin,gnd))*(1 - kTable(V(vacpin,gnd)))}
+Rd D E {Rsec*LpriTable(V(vacpin,gnd))/LsecTable(V(vacpin,gnd))}
+Le E pri2 1T
+Lf sec1 sec2 1T
+K1 Le Lf 1
+Rm sec1 sec2 {Rout}
+
+.ends
+
